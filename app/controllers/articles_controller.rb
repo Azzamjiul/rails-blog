@@ -21,6 +21,11 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def api_all
+    @articles = Article.all
+    render json: @articles
+  end
+
   private
     def article_params
       params.require(:article).permit(:title, :body)

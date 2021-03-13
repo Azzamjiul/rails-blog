@@ -8,6 +8,9 @@ Bundler.require(*Rails.groups)
 
 module Blog
   class Application < Rails::Application
+    # API ONLY APPLICATION
+    config.api_only = true
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
